@@ -1,0 +1,131 @@
+<template>
+  <div class="pagination-wrapper">
+    <div class="counter"></div>
+
+    <button class="paginate left"><i></i><i></i></button>
+    <button class="paginate right"><i></i><i></i></button>
+
+  </div>
+</template>
+
+<script>
+export default {
+
+}
+</Script>
+<style>
+    .pagination-wrapper {
+        width: 10px;
+    }
+ button {
+	 -webkit-appearance: none;
+	 background: transparent;
+	 border: 0;
+	 outline: 0;
+}
+ .paginate {
+	 margin: 10px;
+	 width: 30px;
+	 height: 50px;
+	 cursor: pointer;
+	 transform: translate3d(0, 0, 0);
+	 position: absolute;
+}
+ .paginate i {
+	 position: absolute;
+	 left: 0;
+	 width: 30px;
+	 height: 5px;
+	 border-radius: 2.5px;
+	 background: hsla(160, 100%, 37%, 1);
+	 transition: all 0.15s ease;
+}
+ .paginate.left {
+	 right: 58%;
+}
+ .paginate.left i {
+	 transform-origin: 0% 10%;
+}
+ .paginate.left i:first-child {
+	 transform: translate(0, -1px) rotate(40deg);
+}
+ .paginate.left i:last-child {
+	 transform: translate(0, 1px) rotate(-40deg);
+}
+ .paginate.left:hover i:first-child {
+	 transform: translate(0, -1px) rotate(30deg);
+}
+ .paginate.left:hover i:last-child {
+	 transform: translate(0, 1px) rotate(-30deg);
+}
+ .paginate.left:active i:first-child {
+	 transform: translate(1px, -1px) rotate(25deg);
+}
+ .paginate.left:active i:last-child {
+	 transform: translate(1px, 1px) rotate(-25deg);
+}
+ .paginate.left[data-state="disabled"] i:first-child {
+	 transform: translate(-5px, 0) rotate(0deg);
+}
+ .paginate.left[data-state="disabled"] i:last-child {
+	 transform: translate(-5px, 0) rotate(0deg);
+}
+ .paginate.left[data-state="disabled"]:hover i:first-child {
+	 transform: translate(-5px, 0) rotate(0deg);
+}
+ .paginate.left[data-state="disabled"]:hover i:last-child {
+	 transform: translate(-5px, 0) rotate(0deg);
+}
+ .paginate.right {
+	 left: 48%;
+}
+ .paginate.right i {
+	 transform-origin: 100% 50%;
+}
+ .paginate.right i:first-child {
+	 transform: translate(0, 1px) rotate(40deg);
+}
+ .paginate.right i:last-child {
+	 transform: translate(0, -1px) rotate(-40deg);
+}
+ .paginate.right:hover i:first-child {
+	 transform: translate(0, 1px) rotate(30deg);
+}
+ .paginate.right:hover i:last-child {
+	 transform: translate(0, -1px) rotate(-30deg);
+}
+ .paginate.right:active i:first-child {
+	 transform: translate(1px, 1px) rotate(25deg);
+}
+ .paginate.right:active i:last-child {
+	 transform: translate(1px, -1px) rotate(-25deg);
+}
+ .paginate.right[data-state="disabled"] i:first-child {
+	 transform: translate(5px, 0) rotate(0deg);
+}
+ .paginate.right[data-state="disabled"] i:last-child {
+	 transform: translate(5px, 0) rotate(0deg);
+}
+ .paginate.right[data-state="disabled"]:hover i:first-child {
+	 transform: translate(5px, 0) rotate(0deg);
+}
+ .paginate.right[data-state="disabled"]:hover i:last-child {
+	 transform: translate(5px, 0) rotate(0deg);
+}
+ .paginate[data-state="disabled"] {
+	 opacity: 0.3;
+	 cursor: default;
+}
+ .counter {
+	 text-align: center;
+	 position: absolute;
+	 width: 100%;
+	 top: 50%;
+	 margin-top: -15px;
+	 font-size: 30px;
+	 font-family: Helvetica, sans-serif;
+	 text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
+	 color: #fff;
+}
+ 
+</style>
